@@ -88,3 +88,15 @@ const accessoricucina = new cucina(
   "avanzato",
 );
 console.log(accessoricucina.cucina5());
+
+const telefono = function (_modello, _colore, _processore, _pixel) {
+  this.modello = _modello;
+  this.colore = _colore;
+  this.processore = _processore;
+  this.pixel = _pixel;
+  this.newdrop = function () {
+    return `(Il nuovo telefono di Claudia è un ${this.modello}, ha un color ${this.colore} sul retro, possiede un processore ${this.processore}, con soli ${this.pixel})     `;
+  };
+};
+const newdrop1 = new telefono("Iphone", "Oro", "potentissimo", "32px");
+console.log(newdrop1.newdrop());
