@@ -11,3 +11,29 @@ const User = function (_nome, _cognome, _eta, _paese) {
 const nuovoutente = new User("Emanuela", "Carrubba", " 27 ", " salerno");
 console.log(nuovoutente);
 console.log(nuovoutente.presentazione());
+
+const sorella = function (
+  _nome,
+  _cognome,
+  _colorecapelli,
+  _residenza,
+  _coloreocchi,
+) {
+  this.nome = _nome;
+  this.cognome = _cognome;
+  this.colorecapelli = _colorecapelli;
+  this.residenza = _residenza;
+  this.coloreocchi = _azzurro;
+  this.sorella = function () {
+    return `(Mia sorella si chiama ${this.nome}, il suo cognome è ${this.cognome}, il suo colore di capelli è ${this.colorecapelli} , risiende in ${this.residenza} , il suo colore degli occhi è ${this._coloreocchi})`;
+  };
+};
+const miasorella = new sorella(
+  "Sara ",
+  "Carrubba",
+  "biondo",
+  "Sicilia",
+  "azzurro",
+);
+console.log(sorella());
+console.log(miasorella.sorella());
