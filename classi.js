@@ -137,3 +137,52 @@ definitivo = new smartphone(
   "2025",
 );
 console.log(definitivo.nuovissimo());
+
+class cucina1 {
+  constructor(
+    _numerosedie,
+    _numerotavolo,
+    _numerofornello,
+    _coloremobili,
+    _televisione,
+  ) {
+    this.numerosedie = _numerosedie;
+    this.numerotavolo = _numerotavolo;
+    this.coloremobili = _coloremobili;
+    this.televisione = _televisione;
+  }
+}
+class nuovaCucina extends cucina1 {
+  constructor(
+    _numerosedie,
+    _numerotavolo,
+    _numerofornello,
+    _coloremobili,
+    _televisione,
+    _forno,
+    _frigorifero,
+  ) {
+    super(
+      _numerosedie,
+      _numerotavolo,
+      _numerofornello,
+      _coloremobili,
+      _televisione,
+    );
+    this.forno = _forno;
+    this.frigorifero = _frigorifero;
+  }
+  cucinaaccessoriata() {
+    return `(ora la cucina ha altri due elementi con diversi colori ${this.forno} e ${this.frigorifero}) `;
+  }
+}
+const nuovacucinacreata = new nuovaCucina(
+  "quattro",
+  " un solo",
+  " quattro",
+  "colore bianco e nero",
+  "avanzato",
+  "forno nero",
+  "frigo verde",
+);
+console.log(nuovacucinacreata.cucinaaccessoriata());
