@@ -1,12 +1,13 @@
-const user = function (_firstName, _lastName, _age, _location) {
-  this.firstName = _firstName;
-  this.lastName = _lastName;
-  this.age = _age;
-  this.location = _location;
+const User = function (_nome, _cognome, _eta, _paese) {
+  this.nome = _nome;
+  this.cognome = _cognome;
+  this.eta = _eta;
+  this.paese = _paese;
+
+  this.presentazione = function () {
+    return `( Ciao, mi chiamo ${this.nome} , il mio cognome è ${this.cognome} , ho ${this.eta} , vengo da ${this.paese})`;
+  };
 };
-user();
-return "Ciao, mi chiamo ${this.firstName} , ${this.lastname";
-user();
-console.log("ciao mi chiamo ${this.firstname}, ${this.lastName");
-("${}");
-${}
+const nuovoutente = new User("Emanuela", "Carrubba", " 27 ", " salerno");
+console.log(nuovoutente);
+console.log(nuovoutente.presentazione());
