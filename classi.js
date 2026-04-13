@@ -89,7 +89,14 @@ const accessoricucina = new cucina(
 );
 console.log(accessoricucina.cucina5());
 
-const telefono = function (_modello, _colore, _processore, _pixel) {
+const telefono = function (
+  _modello,
+  _colore,
+  _processore,
+  _pixel,
+  _prezzo,
+  _anno,
+) {
   this.modello = _modello;
   this.colore = _colore;
   this.processore = _processore;
@@ -100,3 +107,33 @@ const telefono = function (_modello, _colore, _processore, _pixel) {
 };
 const newdrop1 = new telefono("Iphone", "Oro", "potentissimo", "32px");
 console.log(newdrop1.newdrop());
+
+//quindi se io ora volessi creare una sottoclasse per "telefono" aggiungendo altre tre proprietà dovrei fare..
+
+class telefono1 {
+  constructor(_modello, _colore, _processore, _pixel) {
+    this.modello = _modello;
+    this.colore = _colore;
+    this.processore = _processore;
+    this.pixel = _pixel;
+  }
+}
+class smartphone extends telefono1 {
+  constructor(_modello, _colore, _processore, _pixel, _prezzo, _anno) {
+    super(_modello, _colore, _processore, _pixel);
+    this.prezzo = _prezzo;
+    this.anno = _anno;
+  }
+  nuovissimo() {
+    return ` (ora il tel ha anche qs due caratteristiche ${this.prezzo} e ${this.anno})`;
+  }
+}
+definitivo = new smartphone(
+  "Iphone",
+  "Oro",
+  "potentissimo",
+  "32px",
+  "1200 euro",
+  "2025",
+);
+console.log(definitivo.nuovissimo());
